@@ -40,27 +40,27 @@ ServletProject_CarDB
 ├── Java Resources
 │   ├── src/main/java
 │   │   ├── com.jsp.servlet
-│   │   │   ├── AddCarServlet.java
-│   │   │   ├── DeleteCarServlet.java
-│   │   │   ├── DisplayCarServlet.java
-│   │   │   └── UpdateCarServlet.java
+│   │   │   ├── AddCarServlet.java  # Handles the addition of new car details to the database
+│   │   │   ├── DeleteCarServlet.java  # Handles the deletion of car records
+│   │   │   ├── DisplayCarServlet.java  # Retrieves and displays car details based on car ID
+│   │   │   └── UpdateCarServlet.java  # Updates the details of an existing car record
 │   ├── src/main/resources
 │   ├── src/test/java
 │   ├── src/test/resources
-├── Libraries
+├── Libraries  # Contains external libraries or dependencies required for the project
 ├── Deployed Resources
 │   └── webapp
 │       ├── WEB-INF
-│       │   └── web.xml
-│       ├── addCar.html
-│       ├── deleteCar.html
-│       ├── displayCar.html
-│       ├── index.html
-│       └── updateCar.html
-├── web-resources
-├── src
-├── target
-└── pom.xml
+│       │   └── web.xml  # Deployment descriptor that maps URL patterns to servlets
+│       ├── addCar.html  # A form to add new car details (car brand, model, price)
+│       ├── deleteCar.html  # A form to delete car details using car ID
+│       ├── displayCar.html  # A form to display car details by providing car ID
+│       ├── index.html  # The main page with links to add, update, delete, or display car details
+│       └── updateCar.html  # A form to update existing car details based on car ID
+├── web-resources  # Contains any static resources (e.g., images, stylesheets)
+├── src  # Source code and classes
+├── target  # Generated output files after project compilation
+└── pom.xml  # Project Object Model file (used for managing dependencies and build configuration)
 ```
 
 ## File Descriptions
