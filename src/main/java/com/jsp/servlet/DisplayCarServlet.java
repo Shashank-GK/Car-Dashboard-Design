@@ -27,14 +27,14 @@ public class DisplayCarServlet extends GenericServlet {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet_cardb", "root", "120054");
 
-			PreparedStatement pst = conn.prepareStatement("SELECT * FROM car WHERE car_id = ?");
+			PreparedStatement pst = conn.prepareStatement("SELECT * FROM car WHERE carId = ?");
 			pst.setInt(1, carId);
 
 			ResultSet rs = pst.executeQuery();
 			res.setContentType("text/html");
 			PrintWriter out = res.getWriter();
 
-			while (rs.next()) {
+			if (rs.next()) {
 				out.println("<h1>Car Id: " + rs.getInt(1) + "</h1>");
 				out.println("<h1>Car Brand: " + rs.getString(2) + "</h1>");
 				out.println("<h1>Car Model: " + rs.getString(3) + "</h1>");
